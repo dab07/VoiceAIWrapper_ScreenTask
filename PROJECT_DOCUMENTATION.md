@@ -134,12 +134,6 @@ class Task(models.Model):
 
 ### 3. GraphQL Schema Architecture
 
-#### Why GraphQL?
-- **Single Endpoint**: `/graphql/` handles all API requests
-- **Type Safety**: Strong typing with automatic validation
-- **Efficient**: Clients request only needed data
-- **Real-time**: Built-in subscription support (if needed)
-
 #### Schema Structure
 ```graphql
 type Query {

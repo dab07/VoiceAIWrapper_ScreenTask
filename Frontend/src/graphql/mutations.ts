@@ -51,15 +51,14 @@ export const UPDATE_PROJECT = gql`
 `;
 
 export const CREATE_TASK = gql`
-  mutation CreateTask($projectId: ID!, $title: String!, $description: String, $assigneeEmail: String, $dueDate: DateTime) {
-    createTask(projectId: $projectId, title: $title, description: $description, assigneeEmail: $assigneeEmail, dueDate: $dueDate) {
+  mutation CreateTask($projectId: ID!, $title: String!, $description: String, $assigneeEmail: String) {
+    createTask(projectId: $projectId, title: $title, description: $description, assigneeEmail: $assigneeEmail) {
       task {
         id
         title
         status
         description
         assigneeEmail
-        dueDate
         createdAt
         project {
           id
@@ -71,15 +70,14 @@ export const CREATE_TASK = gql`
 `;
 
 export const UPDATE_TASK = gql`
-  mutation UpdateTask($id: ID!, $title: String, $description: String, $status: String, $assigneeEmail: String, $dueDate: DateTime) {
-    updateTask(id: $id, title: $title, description: $description, status: $status, assigneeEmail: $assigneeEmail, dueDate: $dueDate) {
+  mutation UpdateTask($id: ID!, $title: String, $description: String, $status: String, $assigneeEmail: String) {
+    updateTask(id: $id, title: $title, description: $description, status: $status, assigneeEmail: $assigneeEmail) {
       task {
         id
         title
         status
         description
         assigneeEmail
-        dueDate
         createdAt
         project {
           id
