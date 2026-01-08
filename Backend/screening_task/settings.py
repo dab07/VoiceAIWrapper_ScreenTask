@@ -59,8 +59,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'screening_task.wsgi.application'
-
 # Database
 DATABASES = {
     'default': {
