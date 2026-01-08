@@ -24,7 +24,7 @@ const Dashboard: React.FC = () => {
       </div>
     );
   }
-
+  console.log("statsError", statsError);
   if (statsError || projectsError) {
     return (
       <div className="bg-red-50 border border-red-200 rounded-md p-4">

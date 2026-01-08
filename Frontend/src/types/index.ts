@@ -14,7 +14,7 @@ export interface Project {
   description: string;
   status: 'ACTIVE' | 'COMPLETED' | 'ON_HOLD';
   taskCount: number;
-  completedTasks: number;
+  completedTaskCount: number;
   completionRate: number;
   dueDate?: string;
   createdAt: string;

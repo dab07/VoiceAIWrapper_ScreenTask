@@ -6,8 +6,8 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  // Get organization slug from localStorage or context
-  const orgSlug = localStorage.getItem('organizationSlug') || 'demo-org';
+  // Get organization slug from localStorage or use default
+  const orgSlug = localStorage.getItem('organizationSlug') || 'acme-corporation';
   
   return {
     headers: {
